@@ -30,7 +30,7 @@ const getRandomPic = async () => {
 }
 
 
-
+//ObjectId('66ea1ed5e57419409c4752fd')
 
 
 const seedDB = async () => {
@@ -40,6 +40,7 @@ const seedDB = async () => {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
         const camp = new Campground({
+            author: '66ea1ed5e57419409c4752fd',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             image: randomCamgroundPicture,
