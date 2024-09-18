@@ -3,7 +3,6 @@ const ExpressError = require('./utils/ExpressError');
 const Campground = require('./models/campground');
 const Review = require('./models/review');
 
-
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
         req.session.returnTo = req.originalUrl
@@ -12,7 +11,6 @@ module.exports.isLoggedIn = (req, res, next) => {
     }
     next();
 }
-
 
 module.exports.storeReturnTo = (req, res, next) => {
     if (req.session.returnTo) {
